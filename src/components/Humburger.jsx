@@ -1,0 +1,73 @@
+import React, { useEffect, useRef } from "react";
+import { FaXmark } from "react-icons/fa6";
+import { Link, NavLink } from "react-router-dom";
+import gsap from "gsap";
+
+export const Humburger = ({links,setHum}) => {
+ let tl=useRef(null)
+  let box=useRef(null)
+  let x=useRef(null)
+  let text=useRef(null)
+
+    useEffect(
+    ()=>{
+      tl.current =gsap.timeline();
+
+      tl.current.to(box.current, {
+        y: 539,
+        duration: 0.5
+      })
+     .to(x.current,{
+        y:10
+       
+        
+      })
+      .to('hi',{
+        stagger:0.3,
+        duration:0.2
+      })
+    }
+    ,[])
+
+
+
+  
+ function handleClose(){
+
+ 
+ }
+
+   let clas='hover:text-orange-600 hi'
+  return (
+    <div className=" absolute w-[100%] h-[300px] left-0 top-[-540px]  bg-[#323331]   "  ref={box}>
+    <div className="flex flex-col items-center  justify-center gap-4 text-2xl">
+      <Link onClick={()=>setHum(true) }>
+        <FaXmark size='30px' ref={x}  className=" absolute right-[28px] top-[13px]" />
+        </Link>
+      {
+       
+      links.map((j, i) => {
+        return (
+        <NavLink 
+            key={i}
+            to={j.path}
+             className={({isActive })=> `${isActive? 'active':""} ${clas}`  } 
+          >
+            {j.name}
+          </NavLink>
+        );
+      })
+      }
+    </div>
+    <div className="h-60  " onClick={()=>setHum(true)}>
+
+    </div>
+    </div>
+   
+  );
+
+
+  
+};
+
+// onClick={()=>setHum((s)=>!s)}

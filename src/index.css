@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{ height: 100vh; 
+    background: radial-gradient(1200px 800px at 10% 10%, rgba(0,25,50,0.35), transparent), linear-gradient(180deg,#071126, #0b1630);
+  position: relative;
+  }
+
+    .active{
+      color: rgb(238, 133, 133);
+    } 
+
+    nav{
+      position: sticky;
+      top: 10px;
+    }
