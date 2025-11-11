@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Nav from './components/nav'
+
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
 
 import Rejume from './components/routes/Resume'
@@ -8,6 +8,7 @@ import Project from './components/routes/Project'
 import About from './components/routes/About'
 import Error from './components/routes/Error'
 import Home from './components/routes/Home'
+import Layout from './components/routes/Layout'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,8 +16,9 @@ function App() {
     <>  
     <Route
     path='/'
-    element={<Home/>}
+    element={<Layout/>}
     >
+      <Route index element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='project' element={<Project/>} />
       <Route path='skill' element={<Skill/>}/>
@@ -32,7 +34,7 @@ function App() {
   return (
     <>
     <RouterProvider router={routes}>
-    <Nav/> 
+    <Layout/>
     </RouterProvider>
   
        
