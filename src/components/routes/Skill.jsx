@@ -15,8 +15,8 @@ const Skill = () => {
  '>
          
        
-        <h1 className=' leading-tight text-5xl self-start font-extrabold text-[#2DE5E8]'>Skills</h1>
-        <div className='w-full grid grid-cols-3 gap-8  m-10 place-items-center '>
+        <h1 className='pl-4 leading-tight lg:ms-11 text-4xl self-start font-extrabold text-[#2DE5E8]'>Skills</h1>
+        <div className='w-full grid grid-cols-3 gap-8  m-4 mt-9 place-items-center '>
          
 
         {

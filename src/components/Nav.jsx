@@ -21,7 +21,8 @@ const Nav = () => {
     const [hum, setHum] = useState(true)
     return (
         <>
-            <nav className=' bg-[rgba(255,255,255,0.04)] backdrop-blur-[8px] border border-[rgba(255,255,255,0.04)] md:text-[20px] text-[#2DE5E8] h-14 w-full  rounded-3xl mt-2 mx-2 md:h-20 flex justify-between px-7 sticky items-center '>
+        
+            <nav className='z-40 bg-[rgba(255,255,255,0.04)] backdrop-blur-[8px] border border-[rgba(255,255,255,0.04)] md:text-[20px] text-[#2DE5E8] h-14 w-full  rounded-3xl mt-2 mx-2 md:h-20 flex justify-between px-7 sticky items-center '>
                 <div className='  flex gap-5'>
                     <div className='h-10 w-10 rounded-full bg-gradient-to-tr from-slate-800 to-slate-700 flex justify-center  items-center font-semibold  text-white'>TA</div>
                     <h2 className='text-2xl flex  gap-2'> T.A.K</h2>

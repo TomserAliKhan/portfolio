@@ -4,45 +4,21 @@ import { Link, NavLink } from "react-router-dom";
 import gsap from "gsap";
 
 export const Humburger = ({links,setHum}) => {
- let tl=useRef(null)
-  let box=useRef(null)
-  let x=useRef(null)
-  let text=useRef(null)
 
-    useEffect(
-    ()=>{
-      tl.current =gsap.timeline();
 
-      tl.current.to(box.current, {
-        y: 539,
-        duration: 0.5
-      })
-     .to(x.current,{
-        y:10
-       
-        
-      })
-      .to('hi',{
-        stagger:0.3,
-        duration:0.2
-      })
-    }
-    ,[])
+
 
 
 
   
- function handleClose(){
 
- 
- }
 
    let clas='hover:text-orange-600 hi'
   return (
-    <div className=" absolute w-[100%] h-[300px] left-0 top-[-540px]  bg-[#323331]   "  ref={box}>
+    <div className=" absolute w-[100%] h-[300px] left-0 top-[-540px]  bg-[#323331]   "  >
     <div className="flex flex-col items-center  justify-center gap-4 text-2xl">
       <Link onClick={()=>setHum(true) }>
-        <FaXmark size='30px' ref={x}  className=" absolute right-[28px] top-[13px]" />
+        <FaXmark size='30px'  className=" absolute right-[28px] top-[13px]" />
         </Link>
       {
        
