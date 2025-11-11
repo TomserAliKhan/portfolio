@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Nav from '../nav'
+
 
 import Herosection from '../Herosection'
 
