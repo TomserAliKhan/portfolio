@@ -13,11 +13,12 @@ const Skill = () => {
   return (
      <span  className=' flex flex-col items-center justify-center lg p-5
  '>
-        <h1 className='text-5xl leading-tight font-extrabold text-[#2DE5E8] '>Frontend Devloper</h1>
-        <p className='mt-3 text-[19px] text-yellow-50'>
-           I build fast, accessible, and polished web interfaces using React, Tailwind CSS and modern JavaScript. I focus on UX-led designs and clean, maintainable code.
-        </p>
+         
+       
+        <h1 className=' leading-tight text-5xl self-start font-extrabold text-[#2DE5E8]'>Skills</h1>
         <div className='w-full grid grid-cols-3 gap-8  m-10 place-items-center '>
+         
+
         {
             skils.map((m,i)=>{
                return( <div key={i} className=''>
