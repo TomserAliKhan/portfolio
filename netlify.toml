@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist" # agar tum vite use kar rahe ho
+  # agar tum CRA (create-react-app) use kar rahe ho to "build" likhna
+  # publish = "build"
+
+# Redirect all routes to index.html (important for React Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set correct MIME types (optional but helpful)
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Content-Type = "application/json"
