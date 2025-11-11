@@ -10,7 +10,7 @@ useGSAP(()=>{
   let tl=gsap.timeline()
   tl.from('#box',{
     y:-300,
-    duration:0.5,
+    duration:0.2,
     opacity:0
   })
   .from('.hi,#x',{
@@ -33,9 +33,9 @@ useGSAP(()=>{
   return (
     <div id="box" className=" absolute w-[102%]  h-[300px] left-[-8px] top-[-10px]  bg-[#323331]   "  >
     <div  className=" flex flex-col items-center  justify-center gap-4 text-2xl">
-      <Link onClick={()=>setHum(true) }>
-        <FaXmark size='30px'  className=" absolute right-[28px] top-[13px]" />
-        </Link>
+      <span className="w-10 h-10 cursor-pointer absolute right-[28px] top-[13px]" onClick={()=>setHum(true) }>
+        <FaXmark size='30px'  className=" " />
+        </span>
       {
        
       links.map((j, i) => {
@@ -51,7 +51,7 @@ useGSAP(()=>{
       })
       }
     </div>
-    <div className="h-60  " id="x" onClick={()=>setHum(true)}>
+    <div className="h-80  " id="x" onClick={()=>setHum(true)}>
 
     </div>
     </div>
@@ -61,5 +61,3 @@ useGSAP(()=>{
 
   
 };
-
-// onClick={()=>setHum((s)=>!s)}
