@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Skill = () => {
    let skils=[
@@ -13,6 +14,10 @@ const Skill = () => {
      
    ]
 
+   let location=useLocation()
+ 
+  
+   
 
    useGSAP(()=>{
       let sk=gsap.timeline()
@@ -30,8 +35,8 @@ const Skill = () => {
 
    })
   return (
-     <span  className=' flex flex-col items-center justify-center lg p-5
- '>
+     <span  className={`${location.pathname==='/skill'?"h-screen lg:w-[50%]   justify-start mx-auto items-center":' justify-center'} flex flex-col items-center  lg p-5
+ `}>
          
        
         <h1 id='ski' className='pl-4 leading-tight lg:ms-11 text-4xl self-start font-extrabold text-[#2DE5E8]'>Skills</h1>

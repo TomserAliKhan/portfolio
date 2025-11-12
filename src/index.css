@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body{ height: 100vh; 
+body{ 
     background: radial-gradient(1200px 800px at 10% 10%, rgba(0,25,50,0.35), transparent), linear-gradient(180deg,#071126, #0b1630);
   position: relative;
+  background-repeat: no-repeat;
+
+
   }
 
     .active{

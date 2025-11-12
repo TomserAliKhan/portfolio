@@ -2,26 +2,39 @@ import React, { useEffect, useRef } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
-export const Humburger = ({links,setHum}) => {
 
-useGSAP(()=>{
-  let tl=gsap.timeline()
-  tl.from('#box',{
-    y:-300,
-    duration:0.2,
-    opacity:0
-  })
-  .from('.hi,#x',{
-    y:-20,
-    delay:0.1,
-    opacity:0,
-    duration:0.5,
-    stagger:0.1
-  })
+export const Humburger = ({links,setHum,hum}) => {
 
+useEffect(()=>{
+  if (hum==true){
+ let humTl=gsap.timeline()
+ humTl.to('#humbox',{
+  y:340,
+  duration:0.5,
+ })
+ .from('.navhumitem,#humx',{
+  x:50,
+  opacity:0,
+  stagger:0.1
 })
+
+ 
+
+}else{
+   let humTl=gsap.timeline()
+ humTl.to('#humbox',{
+  y:-350,
+  duration:0.7,
+ })
+
+
+}
+
+},[hum])
+
+
+
 
 
 
@@ -29,11 +42,11 @@ useGSAP(()=>{
   
 
 
-   let clas='hover:text-orange-600 hi'
+   let clas='hover:text-orange-600 navhumitem'
   return (
-    <div id="box" className=" absolute w-[102%]  h-[300px] left-[-8px] top-[-10px]  bg-[#323331]   "  >
+    <div id="humbox" className={` absolute w-[102%]  h-[300px] left-[-8px] top-[-350px]  bg-[#323331]  `} >
     <div  className=" flex flex-col items-center  justify-center gap-4 text-2xl">
-      <span className="w-10 h-10 cursor-pointer absolute right-[28px] top-[13px]" onClick={()=>setHum(true) }>
+      <span id="humx" className="w-10 h-10 cursor-pointer absolute right-[28px] top-[13px]" onClick={()=>{setHum(false) }}>
         <FaXmark size='30px'  className=" " />
         </span>
       {
@@ -51,9 +64,9 @@ useGSAP(()=>{
       })
       }
     </div>
-    <div className="h-80  " id="x" onClick={()=>setHum(true)}>
+   
 
-    </div>
+  
     </div>
    
   );

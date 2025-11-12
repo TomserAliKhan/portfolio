@@ -7,7 +7,7 @@ const Herosection = () => {
   return (
     <>
     <div className=' md:flex justify-between '>
-        <span className='md:'>
+        <span className='lg:my-10 lg:flex lg:flex-col  '>
         <About/>
         <Skill/>
         </span>

@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import { ReactTyped } from "react-typed";
 
 
@@ -27,13 +28,14 @@ useGSAP(()=>{
   })
 })
 
+ let location=useLocation()
   
   return (
-    <div className=' flex flex-col items-center justify-center p-5 overflow-x-hidden'>
+    <div className={`${location.pathname==='/about'?"h-screen lg:w-[50%]   justify-start mx-auto items-center":' justify-center'} flex flex-col items-center  p-5 overflow-x-hidden `}>
 
        <h1 id='big' style={{lineHeight:"43px"}} className='text-[45px] translate-x-[-25px] leading-8  font-extrabold text-[#2DE5E8] self-start '>&lt;Frontend&gt;<br />
-       <span className='ms-[2rem]'>&lt;&#47;Devloper&gt;</span> </h1>
-       <h1 id='wiriting' className='text-white self-start mt-5 whitespace-nowrap text-2xl font-bold
+       <span className='ms-[2rem] inline-block lg:pt-2'>&lt;&#47;Devloper&gt;</span> </h1>
+       <h1 id='wiriting' className='text-white self-start mt-5 whitespace-nowrap lg:pt-5 text-2xl font-bold
        '> I am &#160;
          <ReactTyped className='text-orange-600' strings={["<i>ForntEnd Devloper </i>"]} typeSpeed={100}
          backSpeed={100}
@@ -41,7 +43,7 @@ useGSAP(()=>{
          loop /> 
 
       </h1>
-        <p id='p' className='my-6 text-[19px] text-yellow-50 '>
+        <p id='p' className='my-6 text-[19px] text-yellow-50 lg:pt-5'>
            I build fast, accessible, and polished web interfaces using React, Tailwind CSS and modern JavaScript. I focus on UX-led designs and clean, maintainable code.
         </p>
         

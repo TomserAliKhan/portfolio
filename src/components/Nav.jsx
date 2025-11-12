@@ -21,7 +21,7 @@ const Nav = () => {
         { name: "Resume", path: "/resume" }
     ]
 
-    const [hum, setHum] = useState(true)
+    const [hum, setHum] = useState(false)
       useGSAP(()=>{
            let tiNav=gsap.timeline()
            tiNav.from("nav",{
@@ -71,10 +71,10 @@ const Nav = () => {
 
                         }
 
-                        <Link to='#' className='hover:text-white navVal'>
+                        <Link to='https://github.com/TomserAliKhan/' className='hover:text-white navVal'>
                             <FaGithub />
                         </Link>
-                        <Link to='#' className='hover:text-white navVal'>
+                        <Link to='https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=tomser-ali-khan-a09853386' className='hover:text-white navVal'>
                             <SiLinkedin />
                         </Link>
 
@@ -84,17 +84,17 @@ const Nav = () => {
                     </div>
                
                
-<div id='hum' onClick={()=>setHum((s)=>!s)} className='md:hidden' >
+<div id='hum' onClick={()=>setHum(true)} className='md:hidden ' >
  
-       <Link >
+       <Link className='cursor-pointer'>
         <RxHamburgerMenu size='33px'/>
         </Link>
 
 </div>
 
-{
-    !hum && <Humburger links={links} setHum={setHum}/> 
-}
+
+     <Humburger links={links} setHum={setHum} hum={hum}/> 
+
 
             </nav>
         </>
