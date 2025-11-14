@@ -1,13 +1,23 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useLocation } from "react-router-dom";
+
 import { IoMdCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { MdPlace } from "react-icons/md";
+  import { ToastContainer, toast } from 'react-toastify';
+import {  useNavigate } from "react-router-dom";
+   import 'react-toastify/dist/ReactToastify.css'
+
 
 export const Contact = () => {
   const form = useRef();
-  const conLocation = useLocation();
+  
+let tost=(x)=>{
+    toast.success(x)
+  }
+
+let navigate=useNavigate()
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -18,24 +28,35 @@ export const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          tost("Email Send successfully")
+          navigate("/")
+        
         },
         (error) => {
+          toast.error(error)
           console.log("FAILED...", error.text);
+          tost(error)
         }
       );
   };
+  let navigateHome=()=>{
+    navigate("/")
+  }
+
+ 
 
   return (
     <>
+  <button className="bg-red-600" >bbbbbbbbbbbb</button>
 
-    <h1 className=" text-center text-5xl  text-[#2DE5E8] my-10">
+    <h1  className="from-h text-center text-5xl  text-[#2DE5E8] my-10">
             Contact Me
           </h1>
-    <div
-      className={`${conLocation.pathname == "/contact" ? "min-h-screen  " : ""}
-       `}
-      
+           <ToastContainer/>
+    <div 
     >
+
+      
       <span className="flex relative flex-col md:flex-row md:h-[600px] md:w-[75vw] p-1 rounded-2xl md:mx-auto md:bg-white md:items-center  md:gap-5">
       <div className=" w-[300px] h-full md:w-[50%] text-white  bg-[#00B8B0] overflow-hidden relative ps-7 rounded-3xl mx-auto pe-3 py-10 ">
         <h1 className="text-4xl my-2">Contact information</h1>
@@ -68,6 +89,7 @@ export const Contact = () => {
       </div>
       </span>
     </div>
+   
     </>
   );
 };
@@ -192,8 +214,10 @@ export  function RegisterForm() {
 
 
 export  function ExploreButton() {
+   
   return (
     <button
+    
         type="submit" value="Send"
       className="inline-flex items-center md:mt-5 gap-3 font-semibold text-white rounded-full px-6 py-3 transition-colors duration-300 overflow-hidden"
       style={{ backgroundColor: "#7808d0" }}
@@ -259,16 +283,6 @@ export  function ExploreButton() {
 
 
 
-  import { ToastContainer, toast } from 'react-toastify';
-  
-  function Al(){
-  const id = toast.loading("Please wait...")
-    
 
-    return (
-      <div className="bg-yellow-500">
-        <button onClick={id}>Notify!</button>
-        <ToastContainer />
-      </div>
-    );
-  }
+
+  

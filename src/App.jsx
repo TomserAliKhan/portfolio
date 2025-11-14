@@ -12,8 +12,9 @@ import Layout from './components/routes/Layout'
 import  {Contact}  from './components/routes/Contact'
 
 
+
 function App() {
-  const [count, setCount] = useState(0)
+
   let routes=createBrowserRouter(createRoutesFromElements(
     <>  
     <Route
@@ -36,8 +37,10 @@ function App() {
 
   return (
     <>
+
     <RouterProvider router={routes}>
     <Layout/>
+
     </RouterProvider>
   
        

@@ -9,18 +9,18 @@ import {  useState } from 'react';
 import { Humburger } from './Humburger';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
-
-const Nav = () => {
-    let css='navVal'
-    const links = [
-        { name: "Home", path: "/" }
-        , { name: "Skill", path: "/skill" },
+ export const links = [
+        { name: "Home", path: "/" }, 
+        { name: "Skill", path: "/skill" },
         { name: "Project", path: "/project" },
         { name: "About", path: "/about" },
         { name: "Contact", path: "/contact" },
         { name: "Resume", path: "/resume" }
     ]
+
+const Nav = () => {
+    let css='navVal'
+  
 
     const [hum, setHum] = useState(false)
       useGSAP(()=>{
