@@ -18,6 +18,7 @@ const Nav = () => {
         , { name: "Skill", path: "/skill" },
         { name: "Project", path: "/project" },
         { name: "About", path: "/about" },
+        { name: "Contact", path: "/contact" },
         { name: "Resume", path: "/resume" }
     ]
 
