@@ -20,23 +20,26 @@ const Footer = () => {
         footTl.fromTo('footer',{x:-200},{x:0})
         .fromTo('.fi',{
             x:-300,
+            opacity:0
          
            
            
         },{x:0, 
+          opacity:1,
          stagger:0.1,})
         .fromTo('.fi2',{
-            x:200,
-          
+            x:-200,
+          opacity:0
           
            
            
         },{
             x:0, 
+            opacity:1,
          stagger:0.1,})
     },[])
   return (
-    <footer className="w-[95vw] mx-auto p-5 flex md:justify-evenly bg-slate-500 justify-around mt-6 rounded-3xl text-white" >
+    <footer className="w-[80vw] mx-auto p-5 flex md:justify-evenly bg-slate-500 justify-around mt-6 rounded-3xl text-white" >
       <div className="flex flex-col gap-2">
         {links.map((j, i) => {
           return (

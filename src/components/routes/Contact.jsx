@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import { IoMdCall } from "react-icons/io";
@@ -47,7 +47,7 @@ let navigate=useNavigate()
 
   return (
     <>
-  <button className="bg-red-600" >bbbbbbbbbbbb</button>
+
 
     <h1  className="from-h text-center text-5xl  text-[#2DE5E8] my-10">
             Contact Me
