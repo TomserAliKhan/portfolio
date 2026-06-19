@@ -11,6 +11,8 @@ import Home from './components/routes/Home'
 import Layout from './components/routes/Layout'
 import  {Contact}  from './components/routes/Contact'
 
+import class12 from './components/routes/Class12'
+
 
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
       <Route path='contact' element={<Contact/>} />
       <Route path='skill' element={<Skill/>}/>
       <Route path='resume' element={<Rejume/>}/>
+
+ <Route path='class12' element={<class12/>}/>
+      
      <Route path='*' element={<Error/>} />
 
     </Route>
