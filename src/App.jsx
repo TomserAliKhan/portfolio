@@ -30,7 +30,7 @@ function App() {
       <Route path='skill' element={<Skill/>}/>
       <Route path='resume' element={<Rejume/>}/>
 
- <Route path='class12' element={<class12/>}/>
+ <Route path='class12' element={<Class12/>}/>
       
      <Route path='*' element={<Error/>} />
 
