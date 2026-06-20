@@ -11,7 +11,7 @@ import Home from './components/routes/Home'
 import Layout from './components/routes/Layout'
 import  {Contact}  from './components/routes/Contact'
 
-import class12 from './components/routes/Class12'
+import Class12 from './components/routes/Class12'
 
 
 
