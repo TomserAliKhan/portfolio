@@ -15,6 +15,7 @@ import gsap from 'gsap';
         { name: "Project", path: "/project" },
         { name: "About", path: "/about" },
         { name: "Contact", path: "/contact" },
+  { name: "Class12", path: "/class12" },
         { name: "Resume", path: "/resume" }
     ]
 
